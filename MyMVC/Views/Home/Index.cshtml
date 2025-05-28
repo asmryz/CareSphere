@@ -1,0 +1,30 @@
+﻿@model List<MyApiWithMySQL.Models.Appointment>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Patients</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+
+
+    @foreach (var a in Model)
+    {
+        <tr>
+            <td>@a.AppointmentId</td>
+            <td>@a.PatientId</td>
+            <td>@a.DoctorId</td>
+            <td>@a.DateTime</td>
+            <td>@a.CheckupType</td>
+            <td>@a.Status</td>
+            <td>@a.BookingMethod</td>
+            <td>@a.Doctor?.Name</td>
+            <td>@a.Patient?.Name</td>
+            <td>@a.PatientHistories.Count</td>
+        </tr>
+    }
+</table>

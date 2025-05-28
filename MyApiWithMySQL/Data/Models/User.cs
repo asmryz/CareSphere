@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MyApiWithMySQL.Models;
+namespace MyApiWithMySQL.Data.Models;
 
 public partial class User
 {
+    internal readonly object Username;
+
     public int UserId { get; set; }
 
     public string Email { get; set; } = null!;

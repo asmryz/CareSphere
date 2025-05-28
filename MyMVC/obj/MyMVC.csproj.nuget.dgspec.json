@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\asmry\\.NET\\MyMVC\\MyMVC.csproj": {}
+    "C:\\Users\\asmry\\git\\CareSphere\\MyMVC\\MyMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\asmry\\.NET\\MyApiWithMySQL\\MyApiWithMySQL.csproj": {
+    "C:\\Users\\asmry\\git\\CareSphere\\MyApiWithMySQL\\MyApiWithMySQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asmry\\.NET\\MyApiWithMySQL\\MyApiWithMySQL.csproj",
+        "projectUniqueName": "C:\\Users\\asmry\\git\\CareSphere\\MyApiWithMySQL\\MyApiWithMySQL.csproj",
         "projectName": "MyApiWithMySQL",
-        "projectPath": "C:\\Users\\asmry\\.NET\\MyApiWithMySQL\\MyApiWithMySQL.csproj",
+        "projectPath": "C:\\Users\\asmry\\git\\CareSphere\\MyApiWithMySQL\\MyApiWithMySQL.csproj",
         "packagesPath": "C:\\Users\\asmry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asmry\\.NET\\MyApiWithMySQL\\obj\\",
+        "outputPath": "C:\\Users\\asmry\\git\\CareSphere\\MyApiWithMySQL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -56,13 +56,13 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.8, )"
+              "version": "[8.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -76,7 +76,11 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[8.0.5, )"
+              "version": "[9.0.0, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
@@ -110,14 +114,14 @@
         }
       }
     },
-    "C:\\Users\\asmry\\.NET\\MyMVC\\MyMVC.csproj": {
+    "C:\\Users\\asmry\\git\\CareSphere\\MyMVC\\MyMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\asmry\\.NET\\MyMVC\\MyMVC.csproj",
+        "projectUniqueName": "C:\\Users\\asmry\\git\\CareSphere\\MyMVC\\MyMVC.csproj",
         "projectName": "MyMVC",
-        "projectPath": "C:\\Users\\asmry\\.NET\\MyMVC\\MyMVC.csproj",
+        "projectPath": "C:\\Users\\asmry\\git\\CareSphere\\MyMVC\\MyMVC.csproj",
         "packagesPath": "C:\\Users\\asmry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\asmry\\.NET\\MyMVC\\obj\\",
+        "outputPath": "C:\\Users\\asmry\\git\\CareSphere\\MyMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -138,8 +142,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\asmry\\.NET\\MyApiWithMySQL\\MyApiWithMySQL.csproj": {
-                "projectPath": "C:\\Users\\asmry\\.NET\\MyApiWithMySQL\\MyApiWithMySQL.csproj"
+              "C:\\Users\\asmry\\git\\CareSphere\\MyApiWithMySQL\\MyApiWithMySQL.csproj": {
+                "projectPath": "C:\\Users\\asmry\\git\\CareSphere\\MyApiWithMySQL\\MyApiWithMySQL.csproj"
               }
             }
           }

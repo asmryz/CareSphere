@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using MyApiWithMySQL.Models;
+using MyApiWithMySQL.Data.Models;
 using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
 
 

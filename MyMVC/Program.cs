@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient<AppointmentService>();
+builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 

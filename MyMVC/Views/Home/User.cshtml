@@ -1,0 +1,21 @@
+﻿@using MyApiWithMySQL.Data.Models
+@model List<User>
+
+
+<h2>Users</h2>
+<table class="table">
+    <tr>
+        <th>User ID</th>
+        <th>Email</th>
+        <th>Role</th>
+    </tr>
+    @foreach (var u in Model)
+    {
+        <tr>
+            <td>@u.UserId</td>
+            <td>@u.Email</td>
+            <td>@u.Role</td>
+        </tr>
+    }
+</table>
+</table>

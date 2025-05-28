@@ -6,8 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyApiWithMySQL.Data;
-using MyApiWithMySQL.Models;
-
+using MyApiWithMySQL.Data.Models;
 
 namespace MyApiWithMySQL.Controllers
 {

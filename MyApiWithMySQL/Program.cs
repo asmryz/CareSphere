@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MyApiWithMySQL.Data;
 using MyApiWithMySQL;
-using MyApiWithMySQL.Models;
+using MyApiWithMySQL.Data.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);

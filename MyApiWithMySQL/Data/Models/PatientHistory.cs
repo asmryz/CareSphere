@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MyApiWithMySQL.Models;
+namespace MyApiWithMySQL.Data.Models;
 
 public partial class PatientHistory
 {

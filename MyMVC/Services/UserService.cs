@@ -31,8 +31,7 @@ namespace MyMVC.Services
         public async Task<User> Authenticate(Login login)
         {
             // Serialize the Login object to JSON and send it as HttpContent
-            string url = $"http://localhost:5056/api/Users/authenticate?Username={login.Username}&Password={login.Password}";
-            //string url = $"http://localhost:5056/api/Users/authenticate";
+            string url = $"http://localhost:5056/api/Users/authenticate?Email={login.Email}&PasswordHash={login.PasswordHash}";
             var response = await client.GetAsync(url);
             response.EnsureSuccessStatusCode();
 

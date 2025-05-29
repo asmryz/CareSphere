@@ -4,13 +4,11 @@ namespace MyApiWithMySQL.Data.Models
 {
     public class Login
     {
-        internal readonly string PasswordHash;
-
         [Required]
-        public string Username { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string PasswordHash { get; set; } // Changed from field to property to ensure proper initialization handling
     }
 }

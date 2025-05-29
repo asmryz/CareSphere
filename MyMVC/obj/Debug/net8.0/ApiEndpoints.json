@@ -163,12 +163,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "username",
+        "Name": "Email",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "password",
+        "Name": "PasswordHash",
         "Type": "System.String",
         "IsRequired": false
       }

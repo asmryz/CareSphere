@@ -30,12 +30,14 @@ namespace MyApiWithMySQL.Controllers
             return await _context.Users.ToListAsync();
         }
 
-        // Fixed method signature and implementation to resolve CS1061 error  
+        // Fixed method signature and implementation to resolve CS1026 error  
         [HttpGet("authenticate")]
-        public async Task<ActionResult<User>> Authenticate(string username, string password)
+        public async Task<ActionResult<User>> Authenticate(string Email, string PasswordHash)
         {
-            // Fix: Use FirstOrDefaultAsync to retrieve a single user asynchronously  
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username.ToString() == username);
+            // Fix: Added missing closing parenthesis for the Where clause
+            var user = await _context.Users
+                .Where(u => u.Email.Equals(Email) && u.PasswordHash.Equals(PasswordHash))
+                .FirstOrDefaultAsync();
 
             if (user == null)
             {
@@ -45,7 +47,7 @@ namespace MyApiWithMySQL.Controllers
             return user;
         }
 
-        // GET: api/Users/5
+        // GET: api/Users/5  
         [HttpGet("{id}")]
         public async Task<ActionResult<Appointment>> GetUser(int id)
         {

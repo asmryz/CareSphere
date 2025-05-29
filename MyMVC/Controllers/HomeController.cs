@@ -3,6 +3,7 @@ using MyMVC.Models;
 using MyMVC.Services;
 using System.Diagnostics;
 using MyApiWithMySQL.Data.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace MyMVC.Controllers
 {
@@ -47,16 +48,20 @@ namespace MyMVC.Controllers
             if (ModelState.IsValid)
             {
                 var user = _svcUser.Authenticate(login);
-                // TODO: Add authentication logic
-                //if (model.Username == "admin" && model.Password == "password")
-                //{
-                //    return RedirectToAction("Index", "Home");
-                //}
-                //ModelState.AddModelError(string.Empty, "Invalid credentials");
+                if (user != null)
+                {
+                    ViewData["User"] = user;
+                }
             }
-            return View("Login", login);
+            return RedirectToAction("Dashboard"); // Corrected method call
         }
-    
+
+        public IActionResult Dashboard()
+        {
+            return View();
+        }
+
+
 
         public IActionResult Privacy()
         {

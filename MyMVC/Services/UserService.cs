@@ -1,4 +1,5 @@
 ﻿using MyApiWithMySQL.Data.Models;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Text.Json;
 namespace MyMVC.Services
@@ -30,9 +31,14 @@ namespace MyMVC.Services
 
         public async Task<User> Authenticate(Login login)
         {
-            // Serialize the Login object to JSON and send it as HttpContent
-            string url = $"http://localhost:5056/api/Users/authenticate?Email={login.Email}&PasswordHash={login.PasswordHash}";
-            var response = await client.GetAsync(url);
+            var jsonContent = new StringContent(
+                JsonSerializer.Serialize(login),
+                System.Text.Encoding.UTF8,
+                "application/json"
+            );
+
+            var response = await client.PostAsync("http://localhost:5056/api/Users/authenticate?Email=" + login.Email+ "&PasswordHash="+login.PasswordHash, null);
+            Debug.Print($"Response: {response.StatusCode} - {response.ReasonPhrase}");
             response.EnsureSuccessStatusCode();
 
             var json = await response.Content.ReadAsStringAsync();

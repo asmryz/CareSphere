@@ -158,7 +158,7 @@
     "ContainingType": "MyApiWithMySQL.Controllers.UsersController",
     "Method": "Authenticate",
     "RelativePath": "api/Users/authenticate",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [

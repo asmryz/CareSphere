@@ -43,17 +43,17 @@ namespace MyMVC.Controllers
 
 
         [HttpPost]
-        public IActionResult Authenticate(Login login)
+        public async Task<IActionResult> AuthenticateAsync(Login login)
         {
-            if (ModelState.IsValid)
-            {
-                var user = _svcUser.Authenticate(login);
-                if (user != null)
+
+            var user = await _svcUser.Authenticate(login);
+
+            if (user != null)
                 {
                     ViewData["User"] = user;
                 }
-            }
-            return RedirectToAction("Dashboard"); // Corrected method call
+            
+            return View("Dashboard", user); // Corrected method call
         }
 
         public IActionResult Dashboard()

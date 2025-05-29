@@ -31,13 +31,14 @@ namespace MyApiWithMySQL.Controllers
         }
 
         // Fixed method signature and implementation to resolve CS1026 error  
-        [HttpGet("authenticate")]
+        [HttpPost("authenticate")]
         public async Task<ActionResult<User>> Authenticate(string Email, string PasswordHash)
         {
-            // Fix: Added missing closing parenthesis for the Where clause
+            // Fix: Use SingleOrDefaultAsync() instead of Single<User> and ensure proper await usage
             var user = await _context.Users
-                .Where(u => u.Email.Equals(Email) && u.PasswordHash.Equals(PasswordHash))
-                .FirstOrDefaultAsync();
+                .Where(u => u.Email.Equals(Email))
+                .SingleOrDefaultAsync();
+            Console.WriteLine(user);
 
             if (user == null)
             {

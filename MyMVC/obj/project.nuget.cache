@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X0lPxUeTHkU=",
+  "dgSpecHash": "cKYszCR4mzg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\asmry\\git\\CareSphere\\MyMVC\\MyMVC.csproj",
+  "projectFilePath": "D:\\git\\CareSphere\\MyMVC\\MyMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asmry\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\asmry\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
